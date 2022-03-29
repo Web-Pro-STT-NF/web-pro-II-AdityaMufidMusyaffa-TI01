@@ -14,9 +14,19 @@
   </style>
 </head>
 <body>
-<div class="container mt-3">
-<legend><h2>Form Nilai Siswa</h2></legend>
-<hr style="border-bottom: 5px solid black;">
+  <div div class="container-fluid">
+    <div class="row">
+      <div class="col-12 bg-light pt-2 border border-2">
+        <p>Sistem Penilaian</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4 class="pt-2">Form Nilai Siswa</h4>
+        <hr>
+      </div>
+    </div>
+  </div>
 
   <form action="" method="POST">
     <div class="form-group row">
@@ -119,5 +129,13 @@
       <?php endswitch ?>
   <?php endif ?>
 </div>
+<div class="container-fluid my-2">
+    <div class="row">
+      <div class="col-12 bg-light pt-2 border border-2">
+        <p>Developed By Aditya M Musyaffa</p>
+      </div>
+    </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
