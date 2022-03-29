@@ -61,7 +61,7 @@
       <div class="col-6">
         <ul class="list-group">
           <li class="list-group-item bg-warning">DAFTAR HARGA</li>
-          <li class="list-group-item">TV: 4.500.000</li>
+          <li class="list-group-item"> TV: 4.500.000</li>
           <li class="list-group-item">KULKAS: 3.100.000</li>
           <li class="list-group-item">MESIN CUCI: 3.800.000</li>
           <li class="list-group-item bg-warning">HARGA DAPAT BERUBAH SETIAP SAAT</li>
@@ -78,9 +78,10 @@
         <table class="table table-striped table-hover table-dark border-light">
           <thead>
             <tr>
-              <th>customer</th>
+              <th>Customer</th>
               <th>Product</th>
               <th>Quantity</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
@@ -88,6 +89,22 @@
               <td><?= $customer ?></td>
               <td><?= $product ?></td>
               <td><?= $quantity ?></td>
+              <td><?php
+                switch ($_POST['product']) {
+                  case 'TV':
+                    $harga = 4500000;
+                    echo number_format($quantity * $harga);
+                    break;
+                  case 'Kulkas':
+                    $harga = 3100000;
+                    echo number_format($quantity * $harga);
+                    break;
+                  case 'Mesin Cuci':
+                    $harga = 3800000;
+                    echo number_format($quantity * $harga);
+                    break;
+                }
+              ?></td>
             </tr>
           </tbody>
         </table>
