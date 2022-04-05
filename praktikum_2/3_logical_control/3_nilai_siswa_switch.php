@@ -97,36 +97,27 @@
           }
         // echo $grade;
       ?>
+
+    <b><p>Siswa: <?= $nama ?></p></b>
+    <b><p>Mata Kuliah: <?= $matkul ?></p></b>
     <?php 
       switch($grade) : 
         case "E" : ?>
-        <b><p>Siswa: <?= $nama ?></p></b>
-        <b><p>Mata Kuliah: <?= $matkul ?></p></b>
         <b><p class="text-danger">Predikat: SANGAT KURANG</p></b>
         <?php break; 
         case "D" : ?>
-        <b><p>Siswa: <?= $nama ?></p></b>
-        <b><p>Mata Kuliah: <?= $matkul ?></p></b>
         <b><p class="text-danger">Predikat: KURANG</p></b>
         <?php break; 
         case "C" : ?>
-        <b><p>Siswa: <?= $nama ?></p></b>
-        <b><p>Mata Kuliah: <?= $matkul ?></p></b>
         <b><p class="text-warning">Predikat: CUKUP</p></b>
         <?php break; 
         case "B" : ?>
-        <b><p>Siswa: <?= $nama ?></p></b>
-        <b><p>Mata Kuliah: <?= $matkul ?></p></b>
         <b><p class="text-success">Predikat: MEMUASKAN</p></b>
         <?php break; 
         case "A" : ?>
-        <b><p>Siswa: <?= $nama ?></p></b>
-        <b><p>Mata Kuliah: <?= $matkul ?></p></b>
         <b><p class="text-success">Predikat: SANGAT MEMUASKAN</p></b>
         <?php break; 
         case "I" : ?>
-        <b><p>Siswa: <?= $nama ?></p></b>
-        <b><p>Mata Kuliah: <?= $matkul ?></p></b>
         <b><p class="text-danger">Predikat: TIDAK ADA</p></b>
       <?php endswitch ?>
   <?php endif ?>
