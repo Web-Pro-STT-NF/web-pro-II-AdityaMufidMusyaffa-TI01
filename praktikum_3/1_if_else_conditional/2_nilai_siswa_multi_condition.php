@@ -1,3 +1,6 @@
+<?php 
+include_once '../3_function/libfungsi.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,50 +85,13 @@
         $nilaiTotal = ($nilaiUts + $nilaiUas + $nilaiTugas) / 3;
         // var_dump($nilaiTotal);
         ?>
-        <?php 
-          if($nilaiTotal >= 0 && $nilaiTotal <= 35) : ?>
-            <b><p>Siswa : <?= $nama ?></p></b>
-            <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-            <p>Nilai UTS = <?= $nilaiUts ?></p>
-            <p>Nilai UAS = <?= $nilaiUas ?></p>
-            <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-            <b><p class='text-danger'>Nilai Total = <?= (int) $nilaiTotal ?> (Grade E)</p></b>
-            <?php elseif($nilaiTotal >= 36 && $nilaiTotal <= 55) : ?>
-              <b><p>Siswa : <?= $nama ?></p></b>
-              <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-              <p>Nilai UTS = <?= $nilaiUts ?></p>
-              <p>Nilai UAS = <?= $nilaiUas ?></p>
-              <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-              <b><p class='text-danger'>Nilai Total = <?= (int) $nilaiTotal ?> (Grade D)</p></b>
-            <?php elseif($nilaiTotal >= 56 && $nilaiTotal <= 69) : ?>
-              <b><p>Siswa : <?= $nama ?></p></b>
-              <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-              <p>Nilai UTS = <?= $nilaiUts ?></p>
-              <p>Nilai UAS = <?= $nilaiUas ?></p>
-              <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-              <b><p class='text-warning'>Nilai Total = <?= (int) $nilaiTotal ?> (Grade C)</p></b>
-            <?php elseif($nilaiTotal >= 70 && $nilaiTotal <= 84) : ?>
-              <b><p>Siswa : <?= $nama ?></p></b>
-              <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-              <p>Nilai UTS = <?= $nilaiUts ?></p>
-              <p>Nilai UAS = <?= $nilaiUas ?></p>
-              <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-              <b><p class='text-success'>Nilai Total = <?= (int) $nilaiTotal ?> (Grade B)</p></b>
-            <?php elseif($nilaiTotal >= 85 && $nilaiTotal <= 100) : ?>
-              <b><p>Siswa : <?= $nama ?></p></b>
-              <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-              <p>Nilai UTS = <?= $nilaiUts ?></p>
-              <p>Nilai UAS = <?= $nilaiUas ?></p>
-              <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-              <b><p class='text-success'>Nilai Total = <?= (int) $nilaiTotal ?> (Grade A)</p></b>
-            <?php else : ?>
-              <b><p>Siswa : <?= $nama ?></p></b>
-              <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-              <p>Nilai UTS = <?= $nilaiUts ?></p>
-              <p>Nilai UAS = <?= $nilaiUas ?></p>
-              <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-              <b><p class='text-danger'>Nilai Total = <?= (int) $nilaiTotal ?> (Grade I)</p></b>
-          <?php endif ?>
+        <b><p>Siswa : <?= $nama ?></p></b>
+        <b><p>Mata Kuliah : <?= $matkul ?></p></b>
+        <p>Nilai UTS = <?= $nilaiUts ?></p>
+        <p>Nilai UAS = <?= $nilaiUas ?></p>
+        <p>Nilai Tugas = <?= $nilaiTugas ?></p>
+        <b><p>Nilai Total = <?= $nilaiTotal ?></p></b>
+        <b><p>Grade: <?= grade($nilaiTotal) ?></p></b>
         <?php endif ?>
       </div>
     </div>
