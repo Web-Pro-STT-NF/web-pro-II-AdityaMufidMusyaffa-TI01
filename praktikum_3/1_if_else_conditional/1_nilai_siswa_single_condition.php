@@ -1,3 +1,6 @@
+<?php 
+include_once '../3_function/libfungsi.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,21 +85,13 @@
           $nilaiTotal = ($nilaiUts + $nilaiUas + $nilaiTugas) / 3;
           // var_dump($nilaiTotal);
           ?>
-          <?php if($nilaiTotal > 55) : ?>
             <b><p>Siswa : <?= $nama ?></p></b>
             <b><p>Mata Kuliah : <?= $matkul ?></p></b>
             <p>Nilai UTS = <?= $nilaiUts ?></p>
             <p>Nilai UAS = <?= $nilaiUas ?></p>
             <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-            <b><p class='text-success'>Nilai Total = <?= (int) $nilaiTotal ?> (LULUS)</p></b>
-            <?php  else : ?>
-              <b><p>Siswa : <?= $nama ?></p></b>
-              <b><p>Mata Kuliah : <?= $matkul ?></p></b>
-            <p>Nilai UTS = <?= $nilaiUts ?></p>
-            <p>Nilai UAS = <?= $nilaiUas ?></p>
-            <p>Nilai Tugas = <?= $nilaiTugas ?></p>
-            <b><p class='text-danger'>Nilai Total = <?= (int) $nilaiTotal ?> (TIDAK LULUS)</p></b>
-          <?php endif ?>
+            <b><p>Nilai Total = <?= (int) $nilaiTotal ?></p></b>
+            <b><p><?php echo 'DINYATAKAN ' . kelulusan($nilaiTotal); ?></p></b>
         <?php endif ?>
       </div>
     </div>
