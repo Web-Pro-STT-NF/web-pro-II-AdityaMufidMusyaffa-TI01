@@ -22,3 +22,25 @@ function grade($_nilai) {
     return 'I';
   }
 }
+
+function predikat($_grade) {
+  switch($_grade) {
+    case "E" :
+    return 'SANGAT KURANG';
+    break; 
+    case "D" :
+    return 'KURANG';
+    break; 
+    case "C" :
+    return 'CUKUP';
+    break; 
+    case "B" :
+    return 'MEMUASKAN';
+    break; 
+    case "A" :
+    return 'SANGAT MEMUASKAN';
+    break; 
+    case "I" :
+    return 'TIDAK ADA';
+    }
+}

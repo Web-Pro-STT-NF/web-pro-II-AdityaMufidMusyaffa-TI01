@@ -1,3 +1,6 @@
+<?php 
+include_once '../3_function/libfungsi.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,46 +83,12 @@
     $nilaiTugas = $_POST['nilaitugas'];
     $nilaiTotal = ($nilaiUts + $nilaiUas + $nilaiTugas) / 3;
     // var_dump($nilaiTotal);
+    grade($nilaiTotal);
     ?>
-    <?php 
-      if($nilaiTotal >= 0 && $nilaiTotal <= 35) {
-        $grade = "E";
-      } elseif($nilaiTotal >= 36 && $nilaiTotal <= 55) {
-          $grade = "D";
-        } elseif($nilaiTotal >= 56 && $nilaiTotal <= 69) {
-          $grade = "C";
-        } elseif($nilaiTotal >= 70 && $nilaiTotal <= 84) {
-          $grade = "B";
-        } elseif($nilaiTotal >= 85 && $nilaiTotal <= 100) {
-          $grade = "A";
-        } else {
-          $grade = "I";
-          }
-        // echo $grade;
-      ?>
 
     <b><p>Siswa: <?= $nama ?></p></b>
     <b><p>Mata Kuliah: <?= $matkul ?></p></b>
-    <?php 
-      switch($grade) : 
-        case "E" : ?>
-        <b><p class="text-danger">Predikat: SANGAT KURANG</p></b>
-        <?php break; 
-        case "D" : ?>
-        <b><p class="text-danger">Predikat: KURANG</p></b>
-        <?php break; 
-        case "C" : ?>
-        <b><p class="text-warning">Predikat: CUKUP</p></b>
-        <?php break; 
-        case "B" : ?>
-        <b><p class="text-success">Predikat: MEMUASKAN</p></b>
-        <?php break; 
-        case "A" : ?>
-        <b><p class="text-success">Predikat: SANGAT MEMUASKAN</p></b>
-        <?php break; 
-        case "I" : ?>
-        <b><p class="text-danger">Predikat: TIDAK ADA</p></b>
-      <?php endswitch ?>
+    <b><p>Predikat: <?= predikat(grade($nilaiTotal)); ?></b></p>
   <?php endif ?>
 </div>
 <div class="container-fluid my-2">
