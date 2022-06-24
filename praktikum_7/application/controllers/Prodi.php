@@ -11,7 +11,7 @@ class Prodi extends CI_Controller {
 
   public function tambah_data_prodi() {
     $this->load->model('Prodi_model');
-    $data['title'] = 'Admin Kampus';
+    $data['title'] = 'Tambah Prodi';
     $data['prodi'] = $this->Prodi_model->getAllProdi();
 
     $this->load->view('templates/header', $data);

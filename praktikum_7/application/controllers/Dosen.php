@@ -11,7 +11,7 @@ class Dosen extends CI_Controller {
 
   public function tambah_data_dosen() {
     $this->load->model('Dosen_model');
-    $data['title'] = 'Admin Kampus';
+    $data['title'] = 'Tambah Dosen';
     $data['dosen'] = $this->Dosen_model->getAllDosen();
 
     $this->load->view('templates/header', $data);
