@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://127.0.0.1/web-pro-ii-adityamufidmusyaffa-ti01/praktikum_7/';
+$config['base_url'] = 'http://127.0.0.1/web-pro-II-AdityaMufidMusyaffa-TI01/praktikum_7/';
 
 /*
 |--------------------------------------------------------------------------
